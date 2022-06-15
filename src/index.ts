@@ -1,1 +1,1 @@
-console.log('Hello Word');
+import fs from 'fs';
