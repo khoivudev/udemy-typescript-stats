@@ -9,19 +9,16 @@ const matches = fs
     return row.split(',');
   });
 
-// enum - enumeration
-enum MatchResult {
-  HomeWin = 'H',
-  AwayWin = 'A',
-  Draw = 'D',
-}
+const homeWin = 'H';
+const awayWin = 'A';
+const draw = 'D';
 
 let manUnitedWins = 0;
 
 for (let match of matches) {
-  if (match[1] == 'Man United' && match[5] === MatchResult.HomeWin) {
+  if (match[1] == 'Man United' && match[5] === homeWin) {
     manUnitedWins++;
-  } else if (match[2] == 'Man United' && match[5] === MatchResult.AwayWin) {
+  } else if (match[2] == 'Man United' && match[5] === awayWin) {
     manUnitedWins++;
   }
 }
